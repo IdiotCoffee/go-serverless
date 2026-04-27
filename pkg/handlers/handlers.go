@@ -44,6 +44,6 @@ func DeleteUser(req events.APIGatewayProxyRequest, tableName string, dynaClient 
 
 }
 
-func UnhandledMethod(*events.APIGatewayProxyResponse, error) {
+func UnhandledMethod() (*events.APIGatewayProxyResponse, error) {
 	return apiResponse(http.StatusMethodNotAllowed, ErrorMethodNotAllowed)
 }
